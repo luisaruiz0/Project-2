@@ -15,15 +15,18 @@ public final class LinkedStack<T> implements StackInterface<T>
   
 //  < Implementations of the stack operations go here. >
 
-
-   
    public void push(T newEntry)
    {
       Node newNode = new Node(newEntry, topNode);
       topNode = newNode;
    }
    
-   
+   publuc T pop()
+   {
+      T top = peek();
+      topNode = topNode.getNextNode();
+      return top;
+   }
    
    
    
