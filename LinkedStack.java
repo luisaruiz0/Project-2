@@ -14,6 +14,22 @@ public final class LinkedStack<T> implements StackInterface<T>
    } // end default constructor
   
 //  < Implementations of the stack operations go here. >
+
+
+   
+   public void push(T newEntry)
+   {
+      Node newNode = new Node(newEntry, topNode);
+      topNode = newNode;
+   }
+   
+   
+   
+   
+   
+   
+   
+   
 //  . . .
 
 	private class Node
