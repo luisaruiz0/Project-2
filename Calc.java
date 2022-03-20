@@ -1,6 +1,18 @@
-public class Calc
-{
-    public static int evaluatePostfix(String postfix) {
+/**
+ * Calculator class containing algorithms convertToPostfix and evaluatePostfix
+ * and a main method to test
+ * @author Shary Razo
+ * @author Guillermo Roman
+ * @author Luis Ruiz
+ */
+
+public class Calc {
+	/**
+	 * Method to evaluate postfix expression
+	 * @param postfix expression to evaluate, given as a string of characters
+	 * @return The remaining int in the stack after postfix expression is evaluated
+	 */
+	public static int evaluatePostfix(String postfix) { // 
         char[] postfixChars = postfix.toCharArray();
         StackInterface<Integer> valueStack = new ResizeableArrayStack<Integer>(postfixChars.length);
         for(int i=0;i<postfixChars.length;i++){ // Check input string by each character
@@ -33,8 +45,10 @@ public class Calc
         return valueStack.peek();
 	}
 	
+	/** Main method to test convertToPostfix and evaluatePostfix method */
 	public static void main(String args[]) {
 		String string1 = "23*42-/56*+";
 		System.out.println(evaluatePostfix(string1));
 	}
+	
 }
