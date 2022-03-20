@@ -46,8 +46,7 @@ public final class LinkedStack<T> implements StackInterface<T>
       topNode = null;
       
    }
-   
-   
+    
    
 //  . . .
 
