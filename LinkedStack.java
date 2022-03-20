@@ -21,15 +21,31 @@ public final class LinkedStack<T> implements StackInterface<T>
       topNode = newNode;
    }
    
-   publuc T pop()
+   public T pop()
    {
       T top = peek();
       topNode = topNode.getNextNode();
       return top;
    }
    
+   public T peek()
+   {
+      if(isEmpty())
+         throw new EmptyStackException();
+      else
+         return topNode.getData();
+   }
    
+   public boolean isEmpty()
+   {
+      return topNode == null;
+   }
    
+   public void clear()
+   {
+      topNode = null;
+      
+   }
    
    
    
