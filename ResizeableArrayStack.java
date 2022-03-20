@@ -1,5 +1,10 @@
 import java.util.*;
 
+/**
+ * Implementation of Stack Interface using a resizeable array
+ * @author Guillermo Roman
+ */
+
 public class ResizeableArrayStack<T> implements StackInterface<T> {
 	private T[] stack;
 	private int topIndex;
@@ -21,7 +26,6 @@ public class ResizeableArrayStack<T> implements StackInterface<T> {
 	       integrityOK = true;
 	}
 	
-	
 	public void checkIntegrity() {
 		if (integrityOK == false) {
 			throw new SecurityException("Stack is corrupt");
@@ -35,7 +39,7 @@ public class ResizeableArrayStack<T> implements StackInterface<T> {
 		}
 	}
 	
-	//doubleCapacity
+	/** Doubles the capacity of stack if needed */
 	public void ensureCapacity() {
 		if (topIndex >= stack.length-1) {
 			int newLength = 2*stack.length;
