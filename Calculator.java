@@ -6,7 +6,7 @@
  * @author Luis Ruiz
  */
 
-public class Calc {
+public class Calculator {
 	
 	public static String convertToPostfix(String infix) throws Exception {
 	   StackInterface<Character> operatorStack = new LinkedStack<Character>();//empty stack  
