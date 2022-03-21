@@ -1,3 +1,3 @@
 Team Database: Guillermo Roman - | Shary Razo -  | Luis Ruiz - |
-Calc.java Javadoc file:
+Javadoc file:
 video here
