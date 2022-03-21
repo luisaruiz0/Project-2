@@ -77,7 +77,9 @@ public class Calc {
             String infix = "a*b/(c-a)+d*e"; //use string from assignment
 	    String postfix = convertToPostfix(infix);
 	    System.out.println ("postfix exp: " + postfix);
-            System.out.println(evaluatePostfix(postfix)); //evaluate postfix string result from above
+		 
+            String string1 = "23*42-/56*+";
+	    System.out.println("Evalutating " + evaluatePostfix(string1));
 	}
 	
 }
