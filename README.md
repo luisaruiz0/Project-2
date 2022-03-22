@@ -2,4 +2,4 @@ Team Database: Guillermo Roman - ResizeableArray stack implementation and evalua
 
 Javadoc link: luisaruiz0.github.io/Project-2
 
-[link to video]
+https://vimeo.com/690821982
