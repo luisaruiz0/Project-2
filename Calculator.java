@@ -23,7 +23,7 @@ public class Calculator {
 	           char ch = infix.charAt(i);
 	           //check for variable
 	           if(Character.isLetter(ch)) {
-	               postfix = postfix + ch + " ";
+	               postfix = postfix + ch;
 	           }
 	           //check for left parenthesis
 	           else if(ch=='(') {
@@ -32,7 +32,7 @@ public class Calculator {
 	           //check for righr parenthesis
 	           else if(ch==')') {
 	               while(operatorStack.peek()!='(') {
-	                   postfix = postfix + operatorStack.peek() + " ";
+	                   postfix = postfix + operatorStack.peek();
 	                   operatorStack.pop();
 	               }
 	               operatorStack.pop();
@@ -42,7 +42,7 @@ public class Calculator {
 	               int p1 = priorityOperator(ch);
 	               int p2 = priorityOperator(operatorStack.peek());
 	               while(p1<=p2) {
-	                   postfix = postfix + operatorStack.peek() + " ";
+	                   postfix = postfix + operatorStack.peek();
 	                   operatorStack.pop();
 	                   p2 = priorityOperator(operatorStack.peek());
 	               }
